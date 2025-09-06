@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #111;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 22px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        section {
+            padding: 100px 50px;
+            min-height: 100vh;
+        }
+
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #00bcd4, #2196f3);
+            color: #fff;
+            text-align: center;
+        }
+
+        #hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        #hero p {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        #hero img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+        }
+
+        #about,
+        #projects,
+        #skills,
+        #contact {
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h2.section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00bcd4;
+            padding-left: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #00bcd4;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        button.scrollTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pratik Kolambkar</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="Screenshot 2025-09-06 222751.png" alt="My Photo">
+        <h2>Hello, I'm an Engineering Student 👋</h2>
+        <p>I build projects, solve problems, and love exploring technology. This is my portfolio showcasing my work and
+            skills.</p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>I am a passionate engineering student interested in software development, problem-solving, and innovative
+            projects. I enjoy working with new technologies and continuously improving my skills.</p>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3><b>IoT Based Safety Device</b>(Group Project)</h3>
+                <p>Developed a safety device leveraging advancements in IoT and GPS tracking to
+                    trace the location of a person in distress. The device integrates Arduino Nano,
+                    SIM800L module, and NEO-6M GPS module, providing a discreet means for users to
+                    alert predefined contacts during emergencies and share real-time location updates.
+                </p>
+            </div>
+            <div class="project-card">
+                <h3>AgroSmart – AI-based Crop Advisory System</h3>
+                <p> We presented this project at ICAR Goa as part of a group initiative. The idea was to develop a
+                    software solution that enables any individual to get detailed information about a particular crop
+                    and understand whether it can be cultivated in their region. The system also integrates AI-based
+                    assistance, which provides personalized recommendations for crop selection, soil preparation, and
+                    growth monitoring. This project aims to support farmers and gardening enthusiasts by making
+                    agriculture more accessible and data-driven.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-list">
+            <span class="skill">C++</span>
+            <span class="skill">Python</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Django</span>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: <a href="mailto:kolambkarpratik05@gmail.com">kolambkarpratik05@gmail.com</a></p>
+        <p>Linkdin: <a href="https://www.linkedin.com/in/pratik-kolambkar-2b905b28b/"
+                target="_blank">pratik-kolambkar</a></p>
+        <p>GitHub: <a href="https://github.com/PratikK1405" target="_blank">github.com/PratikK1405</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 My Portfolio | Built with ❤️</p>
+    </footer>
+
+    <button class="scrollTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        const scrollBtn = document.querySelector(".scrollTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
